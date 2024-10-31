@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #FF9A8B, #FF6A88, #FF99AC);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            max-width: 90%;
+            width: 100%;
+            margin: 1rem;
+            overflow: hidden;
+        }
+        .greeting {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            animation: slideIn 3s ease-in-out;
+        }
+        .confetti {
+            font-size: 1.8rem;
+            animation: popUp 2s ease-in-out infinite;
+        }
+        img {
+            width: 180px;
+            height: auto;
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Larger screens */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                max-width: 700px;
+                gap: 2rem;
+            }
+            .greeting {
+                max-width: 60%;
+                text-align: left;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.3rem;
+            }
+            img {
+                width: 198px; /* Original specified width */
+                height: auto; /* Adjusts height automatically */
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes popUp {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images.jpg" alt="Birthday celebration image">
+        <div class="greeting">
+            <div class="confetti">🎉✨🥳✨🎉</div>
+            <h1>Happy Birthday!</h1>
+            <p>Wishing you all the joy and happiness on your special day!</p>
+            <p>May your year be filled with success and laughter!</p>
+            <p>Here’s to another amazing year of life!</p>
+            <div class="confetti">🎈🎂🎁🎂🎈</div>
+        </div>
+    </div>
+</body>
+</html>
